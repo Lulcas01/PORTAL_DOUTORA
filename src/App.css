@@ -1,0 +1,10 @@
+.App {
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff
+}
+
+.App h1 {
+  text-align: center;
+  font-weight: bold;
+}

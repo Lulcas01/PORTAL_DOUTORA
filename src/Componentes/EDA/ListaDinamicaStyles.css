@@ -1,0 +1,40 @@
+.inputDinamicoGrupo{
+    display: flex;
+}
+
+.inputDinamicoGrupo > input{
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #2babe288;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.botaoAdd{
+    background-color: #2babe288;
+    border: #2babe2;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.listagem{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.listagem > li{
+    background-color: #2babe255;
+    border-radius: 1rem;
+    padding: 0rem 0rem 0rem 1rem;
+    margin: 0.2rem 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+.botaoExclui{
+    background-color: #2babe233;
+    border: none;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}

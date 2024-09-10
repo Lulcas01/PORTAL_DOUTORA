@@ -1,0 +1,245 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.calendario {
+  flex: 1;
+  margin-right: 1rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calendario .cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendario .cabecalho h2 {
+  flex: 6.5;
+  text-align: center;
+}
+
+.calendario .cabecalho button {
+  border-radius: 0.5rem;
+  background-color: #2babe2;
+  border: none;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+.calendario .grade-calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+}
+
+.calendario .nome-dia,
+.calendario .celula-dia,
+.calendario .celula-vazia {
+  padding: 1rem;
+  text-align: center;
+  background-color: #2babe288;
+  border-radius: 0.5rem;
+}
+
+.calendario .celula-dia.selecionado {
+  background-color: #2babe2;
+  color: black;
+}
+
+.compromissos {
+  flex: 1;
+  max-height: 28rem;
+  overflow-x: auto;
+}
+
+.lista-compromissos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista-compromissos li {
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  background-color: #2babe222;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.lista-compromissos li.selecionado {
+  background-color: #2babe255;
+  color: black;
+}
+
+.formulario-e-detalhes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+
+.formulario-compromisso input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #2babe255;
+  resize: none;
+  border-radius: 0.5rem;
+  border: solid #2babe2 1px;
+}
+
+.formulario-compromisso button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2babe2;
+  font-size: 1.5rem;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.lista-compromissos .card-compromisso {
+  padding: 0.8rem;
+  box-shadow: 2px 2px 2px 2px #2babe2;
+  border-radius: 1rem;
+  display: flex;
+}
+
+.card-compromisso .botao-concluir {
+  padding: 0.7rem;
+  background-color: #2babe2;
+  font-size: 1rem;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  height: fit-content;
+  align-self: center;
+}
+
+.card-compromisso p{
+  margin-bottom: 0;
+}
+
+.areaPaciente{
+  display: flex;
+}
+
+.cpfInput{
+  width: 30%;
+}
+
+.nomeInput{
+  width: 65%;
+  margin-left: auto;
+}
+
+.formularioConclusao .textarea-popup {
+  padding: 0.5rem;
+  background-color: #2babe255;
+  resize: vertical;
+  border-radius: 0.5rem;
+  border: solid #2babe2 1px;
+  width: 100%
+}
+
+.formularioConclusao input,
+.formularioConclusao select {
+  width: 100%;
+  border: none;
+  background-color: #2babe255;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.formularioConclusao label{
+  font-size: 1rem;
+}
+
+.formularioConclusao .pagamentos{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formularioConclusao button{
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #2babe2;
+  border: none;
+  font-size: 2rem;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+  }
+
+  .calendario {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .calendario .grade-calendario {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .formulario-compromisso button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendario .cabecalho h2 {
+    font-size: 1.2rem;
+  }
+
+  .calendario .grade-calendario {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .calendario .nome-dia,
+  .calendario .celula-dia,
+  .calendario .celula-vazia {
+    padding: 5px;
+  }
+
+  .lista-compromissos li {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .detalhes-compromissos .card-compromisso {
+    padding: 0.5rem;
+  }
+
+  .areaPaciente{
+    flex-direction: column;
+  }
+  
+  .cpfInput{
+    width: 100%;
+  }
+  
+  .nomeInput{
+    width: 100%;
+    margin-left: 0;
+  }
+}

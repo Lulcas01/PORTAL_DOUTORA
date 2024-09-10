@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+
+.side-bar {
+    width: 20vw;
+    height: 100vh;
+    box-shadow: 0.3vh 0 0 #2babe2;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.side-bar .logo {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+}
+
+.side-bar .logo .escrita1 {
+    font-size: 1.8rem;
+    line-height: 100%;
+    padding-left: 0.8rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.side-bar .logo .escrita2 {
+    line-height: 80%;
+    background: #2BABE2;
+    border-radius: 0.5rem;
+    font-family: 'Sail';
+    font-style: normal;
+    font-size: 2.8rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.2rem 0.6rem 0.2rem 0;
+}
+
+
+.side-bar .logo .escrita1 img {
+    width: 2.2rem;
+    height: auto;
+    padding-left: 0.4rem;
+}
+
+.side-bar>ul {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 0;
+    font-family: 'Poppins';
+    max-width: fit-content;
+}
+
+.side-bar>ul>.side-bar-item {
+    padding-top: 5vh;
+}
+
+
+.side-bar>ul>.side-bar-item .aba {
+    text-decoration: none;
+    font-size: 1.7rem;
+    background-color: white;
+    transition: background-color 1s ease;
+    border-radius: 0.5rem;
+    border: 0vh;
+    display: flex;
+    justify-content: center;
+}
+
+.side-bar>ul>.side-bar-item .aba:hover {
+    background-color: #2BABE255;
+    cursor: pointer;
+}
+
+.side-bar>ul>.side-bar-item .selecionada {
+    background-color: #2BABE2;
+}
+
+.conteudoPrincipal {
+    margin-left: 21vw;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.janela {
+    display: flex;
+}
+
+.botao-menu {
+    display: none;
+    background-color: #2babe2;
+    color: black;
+    padding: 0.7rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .side-bar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        display: none;
+    }
+    
+
+    .side-bar.menu-aberto {
+        transform: translateX(0);
+        width: 100vw;
+        display: flex;
+    }
+
+    .conteudoPrincipal {
+        margin-left: 1rem;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+}
